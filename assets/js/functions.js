@@ -20,7 +20,7 @@ toggleTheme.addEventListener('click', () => {
         toggleTheme.classList.add('bg-warning', 'text-dark');
     } else {
         toggleIcon.src = "assets/img/logo/moon.svg";
-        toggleText.textContent = "Dark Mode";
+        toggleText.textContent = "Dark Side";
         toggleTheme.classList.remove('bg-warning', 'text-dark');
 
     }
@@ -104,7 +104,11 @@ function playSound(filename = "lofi-beat-chill") {
     var mp3Source = '<source src="' + this.filename + '.mp3" type="audio/mpeg">';
     var oggSource = '<source src="' + this.filename + '.ogg" type="audio/ogg">';
     var embedSource = '<embed hidden"true" autostart="true" loop="false" src="' + this.filename + '.mp3>"';
-    document.getElementById("sound").innerHTML = '<audio autoplay="autoplay" controls>' + mp3Source + oggSource + embedSource + '</audio>';
+    if (this.filename.includes("lofi-beat-chill")) {
+        document.getElementById("music").innerHTML = '<audio autoplay="autoplay" controls>' + mp3Source + oggSource + embedSource + '</audio>';
+    } else {
+        document.getElementById("sound").innerHTML = '<audio autoplay="autoplay" controls>' + mp3Source + oggSource + embedSource + '</audio>';
+    }
 }
 
 function showTyped(e) {

@@ -22,6 +22,7 @@
     <div class="container-sm">
       <a class="navbar-brand m-0 p-0" href="#">
         <img src="assets/img/logo_sin_bg.png" class="img-fluid" style="height:3.3rem;" onclick="showAvatar();">
+        <sub><mark style="border-radius:3px;">&#91;EniDev911&#93;</mark></sub>
       </a>
       <div class="switches" onclick="playSound('lightsaber')">
         <div id="toggle-theme" class="toggle-theme badge bg-secondary">
@@ -43,6 +44,9 @@
           </li>
           <li class="nav-item py-2">
             <a class="nav-link" href="#contacts">Contacto</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link" href="#panas">Panas</a>
           </li>
         </ul>
       </div>
@@ -143,7 +147,7 @@
       </div>
     </div>
     <div class="row mt-3 text-center mx-auto">
-      <div class="col-12 col-md-6 col-lg-4 col-xl my-2">
+      <div class="col-12 col-md-6 col-lg-4 col-xl mb-3">
         <!-- Cards-1 DevOps -->
         <div class="card border card-hover shadow">
           <div class="card-header p-0 m-0">
@@ -159,8 +163,8 @@
         </div>
       </div>
       <!-- card-2 designer -->
-      <div class="col-12 col-md-6 col-lg-4 my-2">
-        <div class="card border card-hover shadow">
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="card border card-hover shadow flex">
           <div class="card-header p-0 m-0">
             <i class="fas fa-drafting-compass fa-5x my-3"></i>
           </div>
@@ -176,7 +180,7 @@
         </div>
       </div>
       <!-- card-3 force -->
-      <div class="col-12 col-md-6 col-lg-4 my-2">
+      <div class="col-12 col-md-6 col-lg-4">
         <div class="card border card-hover shadow">
           <div class="card-header p-0 m-0">
             <i class="fas fa-journal-whills fa-5x my-3"></i>
@@ -516,7 +520,8 @@
               <!-- row bootstrap -->
               <div class="row mb-3">
                 <div class="col-1 d-flex my-auto">
-                  <i class="fab fa-bootstrap fs-2" style="color:#7e378b;"></i>
+                  <abbr data-bs-toggle="tooltip" title="bootstrap framework css"><i class="fab fa-bootstrap fs-2"
+                      style="color:#7e378b;"></i></abbr>
                 </div>
                 <div class="col-11">
                   <div class="progress" style="height: 27px; border: 1px solid #cba;">
@@ -530,7 +535,9 @@
               <!-- row vuejs   -->
               <div class="row mb-3">
                 <div class="col-1 d-flex my-auto">
-                  <i class="fab fa-vuejs fs-2 text-success"></i>
+                  <abbr data-bs-toggle="tooltip" title="vue framework javascript">
+                    <i class="fab fa-vuejs fs-2 text-success"></i>
+                  </abbr>
                 </div>
                 <div class="col-11">
                   <div class="progress" style="height: 27px; border: 1px solid #cba;">
@@ -544,10 +551,12 @@
               <!-- row react -->
               <div class="row">
                 <div class="col-1 d-flex my-auto">
-                  <i class="fab fa-react fs-2 text-info"></i>
+                  <abbr data-bs-toggle="tooltip" data-bs-placement="bottom" title="react framework javascript">
+                    <i class="fab fa-react fs-2 text-info"></i>
+                  </abbr>
                 </div>
                 <div class="col-11">
-                  <div class="progress" style="height: 27px; border: 1px solid #cba">
+                  <div class="progress" style="height: 27px; border: 1px solid #cba;">
                     <div class="progress-bar progress-bar-striped bg-info text-light fw-bold progress-bar-animated"
                       role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
                       50%
@@ -561,15 +570,13 @@
       </div>
     </div>
     </div>
-
   </section>
   <footer>
-    <p class="text-center py-2 fs-4 my-auto">&#xa9; EniDev911 2022</p>
+    <p class="text-center py-2 fs-4 my-auto"><small>&#xa9; EniDev911 2022</small></p>
   </footer>
   <!-- music -->
   <div id="sound" class="fixed-bottom text-center" hidden></div>
-
-
+  <div id="music" class="fixed-bottom text-center"></div>
 
   <!-- Libs and scripts -->
   <!-- Sweet Alert2 -->
