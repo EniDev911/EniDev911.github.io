@@ -42,7 +42,7 @@ body.dark nav {
     backdrop-filter: blur(1.5rem) !important;
 }
 
-body.dark nav .toggle-theme__icon {
+body.dark .toggle-theme__icon {
     filter: invert(100%) !important;
 }
 
@@ -60,7 +60,8 @@ body.dark div.card {
     transition-timing-function: ease-in-out, ease-out;
 }
 
-body.dark div.card:hover {
+body.dark div.card:hover,
+body.dark article.card:hover {
     border-bottom: 2px solid var(--primary-color);
     background: #373a3c !important;
     color: var(--primary-color) !important;

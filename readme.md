@@ -7,3 +7,5 @@
 - [x] [Rolando Hinojosa](https://github.com/Rolox87/DesafioFinalPortafolio/compare/main...EniDev911:main)
 
 - [x] [Cristian Faúndez](https://github.com/EniDev911/ElCriSN-portfolio/commit/fb6c7167ba24a5b8a4be8f738958b6b1d9286102)
+
+- [x] [Enrique Valderrama](https://github.com/BulzareK/BulzareK.github.io/pull/1)
