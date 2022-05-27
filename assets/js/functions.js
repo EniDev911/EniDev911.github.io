@@ -19,7 +19,6 @@ toggleTheme.addEventListener('click', () => {
         toggleIcon.src = "assets/img/logo/sun.svg";
         toggleText.textContent = "Light Side";
         toggleTheme.classList.add('bg-warning', 'text-dark');
-        toggleTheme.classList.add('bg-warning', 'text-dark');
         for (let pro of progress) {
             pro.classList.add('bg-secondary');
         }
