@@ -7,8 +7,10 @@ const toggleTheme = document.getElementById('toggle-theme');
 const skillSection = document.getElementById('skill-software');
 const toggleIcon = document.getElementById("toggle-icon");
 const toggleText = document.getElementById("toggle-text");
-let nav = document.getElementById('navbar');
+const nav = document.getElementById('navbar');
 const card = document.querySelector('.card');
+const progress = document.querySelectorAll(".progress");
+const progressBar = document.querySelectorAll(".progress-bar");
 
 toggleTheme.addEventListener('click', () => {
     document.body.classList.toggle('dark');
@@ -17,12 +19,22 @@ toggleTheme.addEventListener('click', () => {
         toggleIcon.src = "assets/img/logo/sun.svg";
         toggleText.textContent = "Light Side";
         toggleTheme.classList.add('bg-warning', 'text-dark');
-        toggleTheme.classList.add('bg-warning', 'text-dark');
+        for (let pro of progress) {
+            pro.classList.add('bg-secondary');
+        }
+        progressBar.forEach((i) => {
+            i.classList.add('bg-danger');
+        })
     } else {
         toggleIcon.src = "assets/img/logo/moon.svg";
         toggleText.textContent = "Dark Side";
         toggleTheme.classList.remove('bg-warning', 'text-dark');
-
+        for (let pro of progress) {
+            pro.classList.remove('bg-secondary');
+        }
+        progressBar.forEach((i) => {
+            i.classList.remove('bg-danger');
+        })
     }
 
 });
@@ -73,7 +85,8 @@ function showAvatar() {
     }
     Swal.fire({
         title: "<h2 class='text-center'><code class='fs-1 text-center' style='color: #f50;'><i class='fas fa-user-secret fs-1'></i> {EniDev911}</code></h2>",
-        imageUrl: relativePathImage + "logo/logo_con_bg.png",
+        // imageUrl: relativePathImage + "logo/logo_con_bg.png",
+        imageUrl: "https://raw.githubusercontent.com/EniDev911/enidev911_guides/main/assets/png/practice.png",
         imageWidth: "200px",
         background: background,
         showConfirmButton: false,
