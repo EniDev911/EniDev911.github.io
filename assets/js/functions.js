@@ -11,6 +11,13 @@ const nav = document.getElementById('navbar');
 const card = document.querySelector('.card');
 const progress = document.querySelectorAll(".progress");
 const progressBar = document.querySelectorAll(".progress-bar");
+const navbarButtonIcon = document.querySelector('.navbar-toggler');
+const groupButtonVertical = document.getElementById('group-btn-sm');
+
+navbarButtonIcon.addEventListener('click', () => {
+    groupButtonVertical.classList.toggle("collapse");
+    // alert('presionaste');
+})
 
 toggleTheme.addEventListener('click', () => {
     document.body.classList.toggle('dark');
@@ -94,6 +101,7 @@ function showAvatar() {
         closeButtonHtml: "<i class='fas fa-times'></i>",
     })
 }
+
 
 function showContactForm() {
     Swal.fire({

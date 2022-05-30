@@ -319,6 +319,7 @@ nav.move #toggle-icon {
         visibility: hidden;
     }
 
+
     .btn-group-vertical {
         /* visibility: hidden; */
     }
@@ -332,6 +333,7 @@ nav.move #toggle-icon {
         background-image: url(../img/logo_sin_bg.png) !important;
 
     }
+
 
     #hero-section {
         --opacity-bg: 0.1;
