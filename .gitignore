@@ -1,5 +1,7 @@
 .vscode
 
+__pycache__
+
 /Thumbs.db
 
 assets/img/logo/Thumbs.db
