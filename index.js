@@ -13,11 +13,9 @@ const progressBar = document.querySelectorAll(".progress-bar");
 const navbarButtonIcon = document.querySelector('.navbar-toggler');
 const groupButtonVertical = document.getElementById('group-btn-sm');
 
-
 navbarButtonIcon.addEventListener('click', () => {
     groupButtonVertical.classList.toggle("collapse");
 })
-
 
 const changeLang = async section => {
     const requestJSON = await fetch(`../json/${section}.json`),
