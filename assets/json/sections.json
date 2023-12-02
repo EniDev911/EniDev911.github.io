@@ -1,0 +1,16 @@
+{
+  "about": {
+    "frases":[
+      {
+        "frase1": ""
+      }
+    ]
+  },
+  "tools": [
+    {
+      "title": "Visual Studio Code",
+      "description": "✏️ Editor de código<br> por excelencia para el desarrollo web", 
+      "image": "visual-studio-code.png"
+    }
+  ]
+}
