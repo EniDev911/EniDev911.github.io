@@ -1,14 +1,14 @@
 /* fonts */
 @font-face {
     font-family: Cascadia Code;
-    src: url(../fonts/CascadiaCode.ttf);
+    src: url(./fonts/CascadiaCode.ttf);
 
 }
 
 @font-face {
     font-family: Victor Mono;
-    src: url(../fonts/VictorMono.ttf);
-    src: url(../fonts/VictorMono-Bold.ttf);
+    src: url(./fonts/VictorMono.ttf);
+    src: url(./fonts/VictorMono-Bold.ttf);
 }
 
 /* ===== color palette  global =========== */
