@@ -38,7 +38,7 @@ body.dark {
 }
 
 body.dark nav {
-    background-color: var(--main-bg-color);
+    /* background-color: var(--main-bg-color); */
     backdrop-filter: blur(1.5rem) !important;
 }
 
@@ -51,6 +51,10 @@ body.dark .nav-link {
     color: var(--text-color) !important;
 }
 
+/* HEADINGS */
+h2 {
+    font-family: "Poller One", serif;
+}
 
 body.dark div.card {
     border-bottom: 2px solid var(--primary-color);
@@ -79,6 +83,14 @@ body.dark .accordion-item button {
     background: var(--card-bg-color);
 }
 
+/* CARD */
+.card-bg-pic {
+    height: 280px;
+    width: 100%;
+    background: var(--pic-dark);
+}
+
+
 .card {
     background-color: var(--card-bg-color) !important;
     border: 1px solid var(--card-border-color) !important;
@@ -88,7 +100,6 @@ body.dark .accordion-item button {
 }
 
 .card:hover {
-    transform: scale(1.03);
     border: 1px solid rgba(16, 170, 11, 0.907) !important;
     box-shadow: 3px 5px 13px rgba(75, 242, 69, 0.907) !important;
     /* box-shadow: 3px 5px 13px var(--primary-color) !important; */
@@ -158,7 +169,6 @@ nav.move #toggle-icon {
 #hero-section {
     width: 100%;
     height: auto;
-    border-bottom: 2px solid var(--primary-color);
 }
 
 .carousel {
@@ -323,21 +333,14 @@ nav.move #toggle-icon {
         visibility: hidden;
     }
 
-
-    .btn-group-vertical {
-        /* visibility: hidden; */
-    }
-
     .navbar-brand {
         display: none;
         visibility: hidden;
     }
 
     .navbar-toggler-icon {
-        background-image: url(../img/logo_sin_bg.png) !important;
-
+        /* background-image: url(../img/logo_sin_bg.png) !important; */
     }
-
 
     #hero-section {
         --opacity-bg: 0.1;
@@ -357,9 +360,4 @@ nav.move #toggle-icon {
         font-size: 1.2rem;
     }
 
-    .coding {
-        font-family: monospace;
-        font-weight: normal;
-        font-size: 1rem;
-    }
 }

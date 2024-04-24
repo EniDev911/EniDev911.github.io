@@ -1,6 +1,5 @@
 // path static
-const relativePathImage = "assets/img/";
-const relativePathMedia = "assets/media/"
+// const relativePathImage = "assets/img/";
 
 const toggleTheme = document.getElementById('toggle-theme');
 const skillSection = document.getElementById('skill-software');
@@ -33,17 +32,17 @@ toggleTheme.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 
     if (toggleIcon.src.includes('moon.svg')) {
-        toggleIcon.src = "assets/img/logo/sun.svg";
+        toggleIcon.src = "/assets/img/sun.svg";
         toggleText.textContent = "Light Side";
         toggleTheme.classList.add('bg-warning', 'text-dark');
-        for (let pro of progress) {
-            pro.classList.add('bg-secondary');
-        }
-        progressBar.forEach((i) => {
-            i.classList.add('bg-danger');
-        })
+        // for (let pro of progress) {
+        //     pro.classList.add('bg-secondary');
+        // }
+        // progressBar.forEach((i) => {
+        //     i.classList.add('bg-danger');
+        // })
     } else {
-        toggleIcon.src = "assets/img/logo/moon.svg";
+        toggleIcon.src = "/assets/img/moon.svg";
         toggleText.textContent = "Dark Side";
         toggleTheme.classList.remove('bg-warning', 'text-dark');
         for (let pro of progress) {
@@ -105,44 +104,14 @@ function showMessage(title, image, message) {
         },
     })
 }
-function showAvatar() {
-    let background = "#373a3c";
-    if (toggleIcon.src.includes("moon.svg")) {
-        background = "";
-        color = "";
-    }
-    Swal.fire({
-        title: "<h2 class='text-center'><code class='fs-1 text-center' style='color: #f50;'><i class='fas fa-user-secret fs-1'></i> {EniDev911}</code></h2>",
-        // imageUrl: relativePathImage + "logo/logo_con_bg.png",
-        imageUrl: "https://raw.githubusercontent.com/EniDev911/enidev911_guides/main/assets/png/practice.png",
-        imageWidth: "200px",
-        background: background,
-        showConfirmButton: false,
-        showCloseButton: true,
-        closeButtonHtml: "<i class='fas fa-times'></i>",
-    })
-}
 
-
-function showContactForm() {
-    Swal.fire({
-        title: "<h2 class='text-center'><code class='fs-1 text-center'><i class='fas fa-user-secret fs-1'></i> {EniDev911}</code></h2>",
-        imageUrl: relativePathImage + "logo_sin_bg.png",
-        imageWidth: "200px",
-        showConfirmButton: false,
-        showCloseButton: true,
-        closeButtonHtml: "<i class='fas fa-times'></i>",
-        input: 'password',
-        inputLabel: 'Password'
-    })
-}
 
 function playSound(filename = "lofi-beat-chill") {
     /**
       * Plays a sound using the HTML5.
       * @param {string} filename The name of the file.!
       */
-    this.filename = relativePathMedia + filename
+    this.filename = "/assets/media/" + filename
     var mp3Source = '<source src="' + this.filename + '.mp3" type="audio/mpeg">';
     var oggSource = '<source src="' + this.filename + '.ogg" type="audio/ogg">';
     var embedSource = '<embed hidden"true" autostart="true" loop="false" src="' + this.filename + '.mp3>"';
@@ -172,7 +141,7 @@ function showTyped(e) {
     });
 }
 
-document.getElementById("aboutMe").addEventListener("click", showTyped);
+document.getElementById("show_typed").addEventListener("click", showTyped);
 
 // Enable popover bootstrap
 let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=""]'));

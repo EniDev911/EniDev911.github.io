@@ -7,14 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EniDev911 - Portfolio</title>
   <!-- Core Bootstrap -->
-  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css">
   <!-- My CSS  -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
     integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- FAVICON -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+  <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -29,12 +32,9 @@
   <!-- ************************ Navigation ******************************** -->
   <nav class="navbar navbar-expand-lg fixed-top m-0 p-0 shadow" id="navbar">
     <div class="container-sm">
-      <a class="navbar-brand m-0 p-0" href="#">
-        <img src="images/logo_sin_bg.png" class="img-fluid" style="height:3.3rem;" onclick="showAvatar();">
-      </a>
       <div class="switches" onclick="playSound('lightsaber')">
         <div id="toggle-theme" class="toggle-theme badge bg-secondary">
-          <img id="toggle-icon" src="images/moon.svg" alt="icon theme" class="toggle-theme__icon">
+          <img id="toggle-icon" src="assets/img/sun.svg" alt="icon theme" class="toggle-theme__icon">
           <p id="toggle-text" class="toggle-theme__text">DARK SIDE</p>
         </div>
       </div>
@@ -52,12 +52,6 @@
           <!-- TRABAJOS -->
           <li class="nav-item py-2 pe-2">
             <a class="nav-link" href="#works">Trabajos</a>
-          </li>
-          <li class="nav-item py-2 pe-2">
-            <a class="nav-link" href="https://dblogging.github.io/" target="_blank">Blog</a>
-          </li>
-          <li class="nav-item py-2">
-            <a class="nav-link" href="#contacts">Contacto</a>
           </li>
         </ul>
       </div>
@@ -83,10 +77,10 @@
         <i class="fas fa-play fs-3 text-dark ps-0"></i>
         &nbsp;Play</button>
       <!-- Cv -->
-      <a href="assets/docs/cv.pdf"
+      <a href="//enidev911.github.io/curriculum"
         class="btn btn-lg btn-warning btn-outline-secondary border-0 ab text-dark text-start hover-light"
-        download="CV-Marco.pdf">
-        <i class="fas fa-file-download fs-2"></i>
+        target="_blank">
+        <i class="fas fa-file fs-2"></i>
         &nbsp;CV</a>
     </div>
     <!-- Carousel wrapper -->
@@ -96,7 +90,7 @@
         <!-- first item -->
         <div class="carousel-item active">
           <video class="d-block w-100" autoplay loop muted>
-            <source src="media/two.mp4" type="video/mp4" />
+            <source src="assets/media/two.mp4" type="video/mp4" />
             Tu navegador no puede reproducirlo
           </video>
         </div>
@@ -116,64 +110,23 @@
   </header>
   <!-- about section -->
   <!-- About -->
-  <section id="about" class="container my-5">
-    <div class="row w-100 mx-auto p-3 rounded shadow">
+  <section id="about" class="container py-5">
+    <h2 class="text-center display-4">Acerca de mí</h2>
+    <div class="row mt-3">
       <div class="col-12 col-lg-5 mb-1">
-        <div class="rounded shadow-1 border border-0 border-bottom border-2 border-danger">
-          <div class="w-100">
-            <img src="images/perfil.jpg" alt="" id="aboutMe" class="w-100 h-100">
-          </div>
-        </div>
+        <img src="assets/img/perfil.jpg" alt="foto perfil" class="w-100 rounded-circle">
       </div>
-      <div class="col-12 col-lg-7 coding">
-        <div class="rounded shadow-1 py-4 card card-dark card-hover">
+      <div class="col-12 col-lg-7">
+        <button id="show_typed" class="btn btn-outline-info">Ver</button>
+        <div class="rounded py-4">
           <h4 class="fs-3 text-start px-3"><span class="typed"></span></h4>
         </div>
       </div>
     </div>
-    <!-- skills  -->
-    <div class="row mt-3 text-center mx-auto" id="section-2">
-      <div class="col-12 col-md-6 col-lg-4 col-xl my-2 h-100">
-        <!-- Cards-1 Fedora -->
-        <div class="card border card-hover shadow h-100">
-          <img src="./assets/img/jpgs/starwars-design-2.jpg" alt="picture" class="card-img-top">
-          <div class="card-body">
-            <h3 class="my-3 fw-bold">Fedora</h3>
-            <p class="card-text my-3"></p>
-          </div>
-        </div>
-      </div>
-      <!-- card-2 -->
-      <div class="col-12 col-md-6 col-lg-4 my-2 h-100">
-        <div class="card border card-hover shadow h-100"
-          style="background: linear-gradient(#000, #00000090), url(./assets/img/jpgs/starwars-design-2.jpg)">
-          <div class="card-body">
-            <h3 class="my-3 fw-bold">Diseñador</h3>
-            <!-- <p class="card-text my-3"></p> -->
-          </div>
-        </div>
-      </div>
-      <!-- card-3 force -->
-      <div class="col-12 col-md-6 col-lg-4 my-2 h-100">
-        <div class="card border card-hover shadow h-100 text-light"
-          style="background: linear-gradient(#00000090, #00000040), url(./assets/img/jpgs/starwars-design-3.jpg)">
-          <div class="card-body">
-            <h3 class="my-3 fw-bold">Camino del Jedi</h3>
-            <p class="card-text my-3"><b><i title="Hace un par de años" data-bs-toggle="tooltip">En una galaxia muy, muy
-                  lejana...</i></b> <br>Me pregunté "¿Exactamente que estoy
-              buscando?" en mi cabeza una voz que respondía:<br><i>&#60;&#60;Nada, y a la vez todo&#62;&#62;</i>. Y en
-              ese
-              momento quería comenzar en los caminos de la <b><i title="programación"
-                  data-bs-toggle="tooltip">fuerza</i></b>, primero
-              como un <b><i title="Junior Developer" data-bs-toggle="tooltip">padawan</i></b>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
+
   <!-- ******************** Work sections ****************************** -->
-  <section id="works" class="container-sm my-5 p-3 rounded shadow">
+  <section id="works" class="container p-5 rounded">
     <h2 class="display-4 fw-bold text-center mb-3">Trabajos</h2>
     <!-- Sistema de grilla -->
     <div class="row">
@@ -527,8 +480,8 @@
                 <div class="col-11">
                   <div class="progress" style="height: 27px; border: 1px solid #cba">
                     <div class="progress-bar progress-bar-striped bg-success text-light fw-bold progress-bar-animated"
-                      role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                      50%
+                      role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                      80%
                     </div>
                   </div>
                 </div>
@@ -538,6 +491,27 @@
         </div>
       </div>
     </div>
+    </div>
+  </section>
+  <section class="py-5 container" id="skills">
+    <!-- skills  -->
+    <div class="row mt-3">
+      <div class="col-12 col-md-6 col-lg-4 col-xl my-2 h-100">
+        <!-- Cards 1-->
+        <div class="card-bg-pic" style="--pic-dark: url(/assets/img/jpgs/starwars-design-2.jpg)">
+
+        </div>
+      </div>
+      <!-- card-2 -->
+      <div class="col-12 col-md-6 col-lg-4 my-2 h-100">
+        <div class="card-bg-pic" style="--pic-dark: url(/assets/img/jpgs/starwars-design-2.jpg)">
+        </div>
+      </div>
+      <!-- card-3 force -->
+      <div class="col-12 col-md-6 col-lg-4 my-2 h-100">
+        <div class="card-bg-pic" style="--pic-dark: url(/assets/img/jpgs/starwars-design-3.jpg)">
+        </div>
+      </div>
     </div>
   </section>
   <footer>
@@ -554,24 +528,8 @@
   <!-- Core Bootstrap -->
   <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
   <!-- Functions -->
-  <script src="index.js"></script>
-  <script>
-    const section2 = document.getElementById('section-2');
+  <script src="assets/js/main.js"></script>
 
-    let fragment = document.createDocumentFragment();
-    let aux = 0;
-    fragment += `
-    <div class="col-12 col-md-6 col-lg-4 col-xl my-2 h-100">
-        <div class="card border card-hover shadow h-100"
-          style="background-image: url(./assets/img/jpgs/${aux})">
-
-          <div class="card-body">
-            <h3 class="my-3 fw-bold">Fedora</h3>
-            <p class="card-text my-3"></p>
-          </div>
-        </div>
-      </div>`
-  </script>
 </body>
 
 </html>
